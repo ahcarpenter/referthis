@@ -6,5 +6,5 @@ Gem::Specification.new do |s|
   s.summary = ''
   s.authors = ''
   s.files = ['lib/referee.rb','lib/referral.rb','lib/sms.rb']
-  # s.homepage = 'http://github.com/ahcarpenter/spreader'
+  s.homepage = 'http://github.com/ahcarpenter/referthis'
 end
