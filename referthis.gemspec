@@ -1,7 +1,7 @@
 # http://guides.rubygems.org/make-your-own-gem/
 Gem::Specification.new do |s|
   s.name = 'referthis'
-  s.version = '0.2.2'
+  s.version = '0.2.3'
   s.date = '2012-06-29'
   s.summary = ''
   s.authors = ''
