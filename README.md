@@ -8,4 +8,4 @@ gem install referthis
 ```
 
 ## Versioning
-(link)[http://semver.org]
+http://semver.org
