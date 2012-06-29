@@ -1,3 +1,4 @@
+<!-- https://github.com/twitter/bootstrap/blob/master/README.md -->
 # ReferThis
 
 ## Installation
@@ -5,3 +6,6 @@
 ```
 gem install referthis
 ```
+
+## Versioning
+(link)[http://semver.org]
