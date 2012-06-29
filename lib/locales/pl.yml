@@ -1,0 +1,104 @@
+# Please maintain alphabetical order
+
+pl:
+  buttons:
+    abandon: "Porzucić ten %{thing}"
+    adopt: 'Przyjąć!'
+    back: 'Z powrotem'
+    change_password: 'Zmień hasło'
+    close: 'Zamknąć'
+    edit_profile: 'Edytuj profil'
+    email_password: 'Powiadom mi moje hasło'
+    find: "Znajdź %{thing}"
+    send_referral: 'Wyślij skierowania'
+    send_reminder: 'Wyślij przypomnienie do łopaty'
+    sign_in: 'Zaloguj się'
+    sign_out: 'Wyloguj się'
+    sign_up: 'Zapisać się'
+    update: 'Aktualizacja'
+  captions:
+    private: '(prywatny)'
+  defaults:
+    address: 'adres'
+    address_1: '233 E. Washington St.'
+    address_2: ''
+    city: 'Syracuse'
+    city_state: 'Syracuse, New York'
+    neighborhood: 'Downtown'
+    sms_number: '315-555-5555'
+    state: 'NY'
+    thing: 'hydrant'
+    this_thing: "Ten %{thing}"
+    tagline: 'Odpowiedzialność roszczenie o odgarnianie się hydrant po pada śnieg'
+    tos: "Zapisując się, wyrażasz zgodę na %{tos}."
+    voice_number: '315-555-5555'
+    zip: '13202'
+  errors:
+    password: 'Musisz się zalogować lub zarejestrować się przed kontynuowaniem.'
+    not_found: "Nie można znaleźć %{thing}."
+  labels:
+    address: 'Adres'
+    address_1: 'Wiersz adresu 1'
+    address_2: 'Wiersz adresu 2'
+    city: 'Miasto'
+    city_state: 'Miasto'
+    disable_email_notifications: 'Wyłącz powiadomienie e-mailem czy opadów śniegu prognozowane'
+    disable_sms_notifications: 'Wyłącz powiadomienie poprzez SMS czy opadów śniegu prognozowane'
+    disable_email_transmission: 'Wyłącz transmisję za pośrednictwem poczty elektronicznej'
+    disable_sms_transmission: 'Wyłącz transmisję przez SMS'
+    email: 'Adres email'
+    enable_email_notifications: 'Włącz powiadomienie e-mailem czy opadów śniegu prognozowane'
+    enable_sms_notifications: 'Włącz powiadomienie poprzez SMS czy opadów śniegu prognozowane'
+    enable_email_transmission: 'Włącz transmisję za pośrednictwem poczty elektronicznej'
+    enable_sms_transmission: 'Włącz transmisję za pomocą SMS'
+    name: 'Nazwa'
+    name_thing: "Daj ten %{thing} nazwę"
+    organization: 'Organizacja'
+    password: 'Hasło'
+    password_choose: 'Wybierz hasło'
+    password_current: 'Bieżące hasło'
+    password_new: 'Nowe hasło'
+    preview: 'Podgląd'
+    remember_me: 'Zapamiętaj mnie'
+    required: 'Wymagany'
+    sms_number: 'Numer telefonu komórkowego'
+    state: 'Stan'
+    user_existing: 'Ja już podpisały'
+    user_new: 'Nie masz jeszcze konta'
+    voice_number: 'Numer telefonu domowego'
+    zip: 'kod pocztowy'
+  links:
+    feedback: 'Wyślij swoją opinię'
+    forgot_password: 'Nie pamiętasz hasła?'
+    remembered_password: 'Nic nie szkodzi. Pamiętam moje hasło.'
+  notices:
+    abandoned: 'Hydrant opuszczony!'
+    adopted: 'Hydrant przyjęty!'
+    password_reset: 'Instrukcje resetowania hasła została wysłana! Sprawdź pocztę.'
+    referral_sent: 'Skierowanie wysłane!'
+    reminder_sent: 'Przypomnienie wysłane!'
+    signed_in: 'Zalogowany!'
+    signed_out: 'Wylogowany.'
+    signed_up: 'Dzięki za podpisanie up!'
+    stolen: 'Hydrant skradziony!'
+  questions:
+    abandon: 'Czy na pewno chcesz zrezygnować z tej hydrant?'
+  sponsors:
+    built: 'Zbudowany w Bostonie & Lexington'
+    cfa: 'Kod do Ameryki'
+    city: 'Miasto z Bostonu'
+    mayor:
+      name: 'Thomas M. Menino'
+      title: 'Mayor'
+  titles:
+    adopt: "Przyjęcie tego %{thing}"
+    adopted: "%{thing_name} został przyjęty"
+    byline: "przez %{name}"
+    conflict: "Dziękujemy za przyjęcie tego %{thing} wcześniej!"
+    edit_profile: 'Edytuj swój Profil'
+    main: "Adopt-a-%{thing}"
+    ofline: "z %{organization}"
+    referral: 'Odnosić się'
+    sign_in: "Zaloguj się, by przyjąć ten %{thing}"
+    thank_you: "Dziękujemy za przyjęcie tego %{thing}!"
+    tos: 'Warunki korzystania z usług'

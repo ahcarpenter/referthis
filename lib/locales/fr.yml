@@ -1,0 +1,105 @@
+# Please maintain alphabetical order
+# http://support.apple.com/kb/PH3871
+
+fr:
+  buttons:
+    abandon: 'Abandonner cette bouche'
+    adopt: 'Adopter!'
+    back: 'Retour'
+    change_password: 'Changer mon mot de passe'
+    close: 'Fermer'
+    edit_profile: 'Modifier le profil'
+    email_password: 'Envoyez-moi mon mot de passe'
+    find: 'Trouver %{thing}'
+    send_referral: 'Envoyer le renvoi'
+    send_reminder: 'Envoyer un rappel à la pelle'
+    sign_in: 'Connectez-vous'
+    sign_out: 'Déconnexion'
+    sign_up: "S'inscrire"
+    update: 'Mise à jour'
+  captions:
+    private: '(privé)'
+  defaults:
+    address: 'Adresse'
+    address_1: '233 E. Washington St.'
+    address_2: ''
+    city: 'Syracuse'
+    city_state: 'Syracuse, New York'
+    neighborhood: 'Downtown'
+    sms_number: '315-555-5555'
+    state: 'NY'
+    thing: "bouche d'incendie"
+    this_thing: "Cette %{thing}"
+    tagline: "La responsabilité Réclamation pour pelleter une bouche d'incendie le feu après qu'il neige."
+    tos: "En vous inscrivant, vous acceptez les %{tos}."
+    voice_number: '315-555-5555'
+    zip: '13202'
+  errors:
+    password: 'Vous devez vous identifier ou vous inscrire avant de poursuivre.'
+    not_found: "Impossible de trouver %{thing}."
+  labels:
+    address: 'Adresse'
+    address_1: 'Adresse ligne 1'
+    address_2: 'Adresse ligne 2'
+    city: 'Ville'
+    city_state: 'Ville'
+    disable_email_notifications: 'Désactiver la notification par courriel si des chutes de neige a été prévu'
+    disable_sms_notifications: 'Désactiver la notification par SMS, si les chutes de neige a été prévu'
+    disable_email_transmission: 'Désactiver la transmission par e-mail'
+    disable_sms_transmission: 'Désactiver la transmission par SMS'
+    email: 'Adresse e-mail'
+    enable_email_notifications: 'Activer la notification par courriel si des chutes de neige a été prévu'
+    enable_sms_notifications: 'Activer la notification par SMS, si les chutes de neige a été prévu'
+    enable_email_transmission: 'Activer la transmission par e-mail'
+    enable_sms_transmission: 'Activer la transmission par SMS'
+    name: 'Nom'
+    name_thing: "Donnez cette %{thing} d'un nom"
+    organization: 'Organisation'
+    password: 'Mot de passe'
+    password_choose: 'Choisissez un mot de passe'
+    password_current: 'Mot de passe actuel'
+    password_new: 'Nouveau mot de passe'
+    preview: 'Avant-première'
+    remember_me: 'Se souvenir de moi'
+    required: 'Requis'
+    sms_number: 'Le numéro de téléphone mobile'
+    state: 'Etat'
+    user_existing: "J'ai déjà signé"
+    user_new: "Je n'ai pas encore inscrits"
+    voice_number: 'Le numéro de téléphone Accueil'
+    zip: 'Code postal'
+  links:
+    feedback: 'Envoyer des commentaires'
+    forgot_password: 'Mot de passe oublié?'
+    remembered_password: "Jamais l'esprit. J'ai rappelé mon mot de passe."
+  notices:
+    abandoned: 'Bouche abandonné!'
+    adopted: 'Bouche adopté!'
+    password_reset: 'Les instructions de réinitialisation de mot de passe envoyé! Vérifiez votre adresse email.'
+    referral_sent: 'Renvoi envoyé!'
+    reminder_sent: 'Rappel envoyé!'
+    signed_in: 'Connecté!'
+    signed_out: 'Déconnecté.'
+    signed_up: 'Merci pour votre inscription!'
+    stolen: 'Bouche volé!'
+  questions:
+    abandon: 'Etes-vous sûr de vouloir abandonner cette bouche?'
+  sponsors:
+    built: 'Construit à Boston & Lexington'
+    cfa: "Code pour l'Amérique"
+    city: 'Ville de Boston'
+    mayor:
+      name: 'Thomas M. Menino'
+      title: 'Mayor'
+  titles:
+    adopt: "Adoptez cette %{thing}"
+    adopted: "%{thing_name} a été adoptée"
+    byline: "par %{name}"
+    conflict: "Merci pour l'adoption de cette %{thing} plus tôt!"
+    edit_profile: 'Modifiez votre profil'
+    main: "Adopt-a-%{thing}"
+    ofline: "de %{organization}"
+    referral: 'Référer'
+    sign_in: "Connectez-vous à adopter cette %{thing}"
+    thank_you: "Merci pour l'adoption de cette %{thing}!"
+    tos: "Conditions D'utilisation"
