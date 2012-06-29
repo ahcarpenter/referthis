@@ -1,0 +1,81 @@
+class Referral < ActiveRecord::Base
+  attr_accessible :referee_id, :user_id
+  
+  def self.construct(referee_id)
+    referral = Referral.new
+    referral.referee_id = referee_id
+    referral.user_id = @user_current_id
+    referral.save
+    return referral
+  end
+  
+  def self.generate_referral(endpoints, user_current_id)
+    threads = []
+    @user_current_id = user_current_id
+    if endpoints[:phone_number] != ''
+      threads << Thread.new('sms'){
+        phone_number = SMS.sieve(endpoints[:phone_number])
+        if Referee.exists?(:endpoint => phone_number)
+          SMS.send_referral(self.construct(Referee.find_by_endpoint(phone_number.to_s).id))
+        else
+          SMS.send_referral(self.construct(Referee.construct(phone_number.to_s).id))
+        end
+      }
+    end
+    if endpoints[:email_address] != ''
+      threads << Thread.new('email'){
+        email_address = endpoints[:email_address]
+        begin
+        if Referee.exists?(:endpoint => email_address)
+          Mailer.send_referral(self.construct(Referee.find_by_endpoint(email_address).id)).deliver
+        else
+          Mailer.send_referral(self.construct(Referee.construct(email_address).id)).deliver
+        end
+        rescue Net::SMTPSyntaxError
+          puts 'Hello'
+        end
+      }
+    end
+    threads.each {|thread| thread.join}
+  end
+  
+  def self.percent_clicked_through(email=nil, sms=nil)
+    if email || sms
+      referrals = Referral.all
+      if referrals.any?
+        count_email = 0
+        clicked_through_email = 0
+        count_sms = 0
+        clicked_through_sms = 0
+        for referral in referrals
+          if email
+            if Referee.find(referral.referee_id).endpoint.include? '@'
+              count_email += 1 
+              clicked_through_email += 1 if referral.visits > 0
+            end
+          end
+          if sms
+            if !Referee.find(referral.referee_id).endpoint.include? '@'
+              count_sms += 1 
+              clicked_through_sms += 1 if referral.visits > 0
+            end
+          end 
+        end
+        puts ((clicked_through_email.to_f / count_email.to_f) * 100).to_s + '%' if email
+        puts ((clicked_through_sms.to_f / count_sms.to_f) * 100).to_s + '%' if sms
+        puts ((Referral.where('visits > 0').count.to_f / Referral.count.to_f) * 100).to_s + '%'
+      else
+        puts '0%'
+      end
+    end
+  end
+    
+  def self.resolve_token(token)
+    referral_id = Base64::decode64(token)
+    if self.exists?(:id => referral_id)
+      referral = self.find(referral_id) 
+      referral.visits = referral.visits + 1
+      referral.save
+    end
+  end
+end
