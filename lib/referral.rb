@@ -40,7 +40,7 @@ class Referral < ActiveRecord::Base
     end
     threads.each {|thread| thread.join}
   end
-  def self.percent_clicked_through(email=nil, sms=nil)
+  def self.clicked_through_stat(email=false, sms=false, overall=true)
     if email || sms
       referrals = Referral.all
       if referrals.any?
@@ -64,11 +64,11 @@ class Referral < ActiveRecord::Base
         end
         puts ((clicked_through_email.to_f / count_email.to_f) * 100).to_s + '%' if email
         puts ((clicked_through_sms.to_f / count_sms.to_f) * 100).to_s + '%' if sms
-        puts ((Referral.where('visits > 0').count.to_f / Referral.count.to_f) * 100).to_s + '%'
       else
         puts '0%'
       end
     end
+    puts ((Referral.where('visits > 0').count.to_f / Referral.count.to_f) * 100).to_s + '%' if overall
   end
   def self.resolve_token(token)
     referral_id = Base64::decode64(token)
