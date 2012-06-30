@@ -22,9 +22,9 @@ ReferThis.url(<endpoints>¹, <user_id>, <base_url>, <user_name>, <app_name>²)
 ```ruby
 ReferThis.clicked_through_rate(<email>¹,<sms>¹,<overall>²)
 ```
-¹defaults to ```false```
+¹```<email>``` defaults to ```false```
 
-²defaults to ```true```
+²```<overall>``` defaults to ```true```
 
 ## Versioning
 http://semver.org
