@@ -15,6 +15,7 @@ ReferThis.setup
 ```
 
 ##Usage
+#Generation
 ```ruby
 ReferThis.url(<endpoints>¹, <user_id>, <base_url>, <user_name>, <app_name>²)
 ```
@@ -24,9 +25,8 @@ ReferThis.url(<endpoints>¹, <user_id>, <base_url>, <user_name>, <app_name>²)
 ```ruby
 Rails.application.class.to_s.split('::').first
 ```
-```ruby
-ReferThis.clicked_through_rate(<email>¹,<sms>¹,<overall>²)
-```
+#Analysis
+```ReferThis.clicked_through_rate(<email>¹,<sms>¹,<overall>²)```
 ¹```<email>``` defaults to ```false```
 
 ²```<overall>``` defaults to ```true```
