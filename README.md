@@ -18,7 +18,9 @@ ReferThis.url(<endpoints>¹, <user_id>, <base_url>, <user_name>, <app_name>²)
 ```
 ¹```<endpoints>``` object structure: ```{'email_address' : 'value', 'phone_number' : 'value'}```
 
-²```<app_name>``` defaults to ```Rails.application.class.to_s.split('::').first```
+²```<app_name>``` defaults to ```ruby
+Rails.application.class.to_s.split('::').first
+```
 ```ruby
 ReferThis.clicked_through_rate(<email>¹,<sms>¹,<overall>²)
 ```
