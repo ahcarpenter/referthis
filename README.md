@@ -7,7 +7,7 @@ http://twitter.github.com/bootstrap/javascript.html -->
 ```
 gem install referthis
 ```
-Migrations can be migrated via the execution of the following command:
+Backend setup:
 ```ruby
 ReferThis.setup
 ```
