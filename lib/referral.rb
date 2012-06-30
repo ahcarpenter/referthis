@@ -40,7 +40,7 @@ class Referral < ActiveRecord::Base
     end
     threads.each {|thread| thread.join}
   end
-  def self.clicked_through_stat(email=false, sms=false, overall=true)
+  def self.clicked_through_rate(email=false, sms=false, overall=true)
     if email || sms
       referrals = Referral.all
       if referrals.any?
