@@ -1,6 +1,9 @@
+require 'active_record'
+require 'mailers/mailer'
+require 'sms'
 class Referral < ActiveRecord::Base
   attr_accessible :referee_id, :user_id
-  
+
   def self.construct(referee_id)
     referral = Referral.new
     referral.referee_id = referee_id
@@ -8,17 +11,16 @@ class Referral < ActiveRecord::Base
     referral.save
     return referral
   end
-  
-  def self.generate_referral(endpoints, user_current_id)
+  def self.generate_referral(endpoints, user_current_id, url, referrer_name, app_name)
     threads = []
     @user_current_id = user_current_id
     if endpoints[:phone_number] != ''
       threads << Thread.new('sms'){
         phone_number = SMS.sieve(endpoints[:phone_number])
         if Referee.exists?(:endpoint => phone_number)
-          SMS.send_referral(self.construct(Referee.find_by_endpoint(phone_number.to_s).id))
+          SMS.send_referral(self.construct(Referee.find_by_endpoint(phone_number.to_s).id), url, referrer_name, app_name)
         else
-          SMS.send_referral(self.construct(Referee.construct(phone_number.to_s).id))
+          SMS.send_referral(self.construct(Referee.construct(phone_number.to_s).id), url, referrer_name, app_name)
         end
       }
     end
@@ -27,9 +29,9 @@ class Referral < ActiveRecord::Base
         email_address = endpoints[:email_address]
         begin
         if Referee.exists?(:endpoint => email_address)
-          Mailer.send_referral(self.construct(Referee.find_by_endpoint(email_address).id)).deliver
+          Mailer.send_referral(self.construct(Referee.find_by_endpoint(email_address).id), url, referrer_name, app_name).deliver
         else
-          Mailer.send_referral(self.construct(Referee.construct(email_address).id)).deliver
+          Mailer.send_referral(self.construct(Referee.construct(email_address).id), url, referrer_name, app_name).deliver
         end
         rescue Net::SMTPSyntaxError
           puts 'Hello'
@@ -38,7 +40,6 @@ class Referral < ActiveRecord::Base
     end
     threads.each {|thread| thread.join}
   end
-  
   def self.percent_clicked_through(email=nil, sms=nil)
     if email || sms
       referrals = Referral.all
@@ -69,7 +70,6 @@ class Referral < ActiveRecord::Base
       end
     end
   end
-    
   def self.resolve_token(token)
     referral_id = Base64::decode64(token)
     if self.exists?(:id => referral_id)
