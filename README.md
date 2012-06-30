@@ -7,7 +7,7 @@ http://twitter.github.com/bootstrap/javascript.html -->
 ```
 gem install referthis
 ```
-Backend setup:
+The backend can be setup via the execution of the following command:
 ```ruby
 ReferThis.setup
 ```
