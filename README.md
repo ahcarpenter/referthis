@@ -15,7 +15,7 @@ ReferThis.setup
 ```
 
 ##Usage
-###Generation
+###Transmission
 ```ruby
 ReferThis.url(<endpoints>¹, <user_id>, <base_url>, <user_name>, <app_name>²)
 ```
