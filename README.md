@@ -23,7 +23,9 @@ ReferThis.url(<endpoints>¹, <user_id>, <base_url>, <user_name>, <app_name>²)
 
 ²```<app_name>``` defaults to ```Rails.application.class.to_s.split('::').first```
 ###Analysis
-```ReferThis.clicked_through_rate(<email>¹,<sms>¹,<overall>²)```
+```ruby
+ReferThis.clicked_through_rate(<email>¹,<sms>¹,<overall>²)
+```
 ¹```<email>``` defaults to ```false```
 
 ²```<overall>``` defaults to ```true```
