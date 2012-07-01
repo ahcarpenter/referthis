@@ -3,8 +3,7 @@ http://twitter.github.com/bootstrap/javascript.html -->
 # ReferThis [![Build Status](https://secure.travis-ci.org/ahcarpenter/referthis.png?branch=master)][travis]
 
 [travis]: http://travis-ci.org/ahcarpenter/referthis
-
-##Example Implementation
+###Example in Production
 http://referthisdemo.herokuapp.com
 
 ## Installation
