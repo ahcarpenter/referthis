@@ -41,7 +41,7 @@ class Referral < ActiveRecord::Base
     threads.each {|thread| thread.join}
   end
   def self.clicked_through_rate(email=false, sms=false, overall=true)
-    clicked_through_rate = []
+    clicked_through_rate = Hash.new
     if email || sms
       referrals = Referral.all
       if referrals.any?
@@ -63,13 +63,13 @@ class Referral < ActiveRecord::Base
             end
           end 
         end
-        clicked_through_rate['email'] = ((clicked_through_email.to_f / count_email.to_f) * 100).to_s + '%' if email
-        clicked_through_rate['sms'] = ((clicked_through_sms.to_f / count_sms.to_f) * 100).to_s + '%' if sms
+        clicked_through_rate['email'] = ((clicked_through_email.to_f / count_email.to_f) * 100) if email
+        clicked_through_rate['sms'] = ((clicked_through_sms.to_f / count_sms.to_f) * 100) if sms
       else
-        return '0%' 
+        return '0' 
       end
     end
-    clicked_through_rate['overall'] = ((Referral.where('visits > 0').count.to_f / Referral.count.to_f) * 100).to_s + '%' if overall
+    clicked_through_rate['overall'] = ((Referral.where('visits > 0').count.to_f / Referral.count.to_f) * 100) if overall
     return clicked_through_rate
   end
   def self.resolve_token(token)
