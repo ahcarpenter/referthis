@@ -11,7 +11,6 @@ The backend can be setup via the execution of the following command:
 ```ruby
 ReferThis.setup
 ```
-
 ##Usage
 ###Transmission
 ```ruby
@@ -27,8 +26,7 @@ ReferThis.clicked_through_rate(<email>¹,<sms>¹,<overall>²)
 ¹```<email>``` defaults to ```false```
 
 ²```<overall>``` defaults to ```true```
-###Example in Production
+###In Production
 http://referthisdemo.herokuapp.com
-
 ## Versioning
 http://semver.org
