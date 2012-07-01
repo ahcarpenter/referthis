@@ -4,6 +4,9 @@ http://twitter.github.com/bootstrap/javascript.html -->
 
 [travis]: http://travis-ci.org/ahcarpenter/referthis
 
+##Example Implementation
+http://referthisdemo.herokuapp.com
+
 ## Installation
 ```referthis``` can be installed via the execution of the following command:
 ```
