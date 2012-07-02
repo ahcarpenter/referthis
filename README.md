@@ -16,7 +16,7 @@ ReferThis.setup
 ```ruby
 ReferThis.url(<endpoints>¹, <user_id>, <base_url>, <user_name>, <app_name>²)
 ```
-¹```<endpoints>'``` object structure: ```{'email_address'=><value>, 'phone_number'=><value>}```
+¹```<endpoints>``` object structure: ```{'email_address'=><value>, 'phone_number'=><value>}```
 
 ²```<app_name>``` defaults to ```Rails.application.class.to_s.split('::').first```
 ###Analysis
