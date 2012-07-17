@@ -10,7 +10,7 @@ class ReferThis < Referral
     system('cp -r ' + File.dirname(File.absolute_path(__FILE__)) + '/db/migrate/* ' + "'" + Rails.root.to_s.split('app/').first + "/db/migrate/'")
     system('rake db:migrate')
   end 
-  def self.url(endpoints, user_current_id, url, referrer_name, app_name=Rails.application.class.to_s.split('::').first)
-    self.generate_referral(endpoints, user_current_id, url, referrer_name, app_name)
+  def self.url(endpoints, user_current_id, url, referrer_name, app_name=Rails.application.class.to_s.split('::').first, body)
+    self.generate_referral(endpoints, user_current_id, url, referrer_name, app_name, body)
   end
 end
