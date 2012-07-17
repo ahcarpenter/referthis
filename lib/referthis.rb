@@ -11,6 +11,6 @@ class ReferThis < Referral
     system('rake db:migrate')
   end 
   def self.url(endpoints, user_current_id, url, referrer_name, app_name=Rails.application.class.to_s.split('::').first, body)
-    self.generate_referral(endpoints, user_current_id, url, referrer_name, app_name, body)
+    self.generate_referral(endpoints, user_current_id, url, referrer_name, app_name)
   end
 end
