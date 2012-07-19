@@ -1,4 +1,6 @@
 class SMS
+  require 'twilio-ruby'
+  
   @@account_sid = 'AC0b322d7367604e7a852a1d59193738a2'
   @@auth_token = 'c32bcf082cb7cee728a99832858db23b'
   @@client = Twilio::REST::Client.new(@@account_sid, @@auth_token)
