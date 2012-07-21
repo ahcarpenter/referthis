@@ -23,8 +23,9 @@ ReferThis.url(endpoints¹, user_id, base_url, user_name[, optional²])
 
 ######²defaults to
 >```ruby
-{:app_name=>Rails.application.class.to_s.split('::').first, :body=>referrer_name + ' has referred you to ' + optional[:app_name] + '! You might be interested in checking out the following: ' + url + '/'}
+{:app_name=>Rails.application.class.to_s.split('::').first}
 ```
+
 ```optional[:body]``` is subsequently assigned:
 >```ruby
 referrer_name + ' has referred you to ' + optional[:app_name] + '! You might be interested in checking out the following: ' + url + '/'
