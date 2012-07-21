@@ -11,20 +11,20 @@ class Referral < ActiveRecord::Base
     referral.save
     return referral
   end
-  def self.generate_referral(endpoints, user_current_id, url, referrer_name, app_name, body)
+  def self.generate_referral(endpoints, user_current_id, url, referrer_name, optional)
     threads = []
     @user_current_id = user_current_id
     if endpoints[:phone_number] != ''
       threads << Thread.new('sms'){
         phone_number = SMS.sieve(endpoints[:phone_number])
-        Referee.exists?(:endpoint => phone_number) ? SMS.send_referral(self.construct(Referee.find_by_endpoint(phone_number.to_s).id), url, referrer_name, app_name, body) : SMS.send_referral(self.construct(Referee.construct(phone_number.to_s).id), url, referrer_name, app_name, body)
+        Referee.exists?(:endpoint => phone_number) ? SMS.send_referral(self.construct(Referee.find_by_endpoint(phone_number.to_s).id), url, referrer_name, optional) : SMS.send_referral(self.construct(Referee.construct(phone_number.to_s).id), url, referrer_name, optional)
       }
     end
     if endpoints[:email_address] != ''
       threads << Thread.new('email'){
         email_address = endpoints[:email_address]
         begin
-        Referee.exists?(:endpoint => email_address) ? Mailer.send_referral(self.construct(Referee.find_by_endpoint(email_address).id), url, referrer_name, app_name, body).deliver : Mailer.send_referral(self.construct(Referee.construct(email_address).id), url, referrer_name, app_name, body).deliver
+        Referee.exists?(:endpoint => email_address) ? Mailer.send_referral(self.construct(Referee.find_by_endpoint(email_address).id), url, referrer_name, optional).deliver : Mailer.send_referral(self.construct(Referee.construct(email_address).id), url, referrer_name, optional).deliver
         rescue Net::SMTPSyntaxError
           puts 'Hello'
         end
