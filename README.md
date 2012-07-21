@@ -16,6 +16,7 @@ ReferThis.setup
 ```ruby
 ReferThis.url(endpoints¹, user_id, base_url, user_name[, optional²])
 ```
+##
 ######¹object structure
 ```ruby
 {'email_address'=>value, 'phone_number'=>value}
@@ -25,10 +26,12 @@ ReferThis.url(endpoints¹, user_id, base_url, user_name[, optional²])
 ```ruby
 {:app_name=>Rails.application.class.to_s.split('::').first, :body=>referrer_name + ' has referred you to ' + optional[:app_name] + '! You might be interested in checking out the following: ' + url + '/'}
 ```
+
 ###Analysis
 ```ruby
 ReferThis.clicked_through_rate(email¹,sms¹,overall²)
 ```
+##
 ######¹defaults to
 ```ruby
 false
