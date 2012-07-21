@@ -17,7 +17,7 @@ ReferThis.setup
 ReferThis.url(endpoints¹, user_id, base_url, user_name[, optional²])
 ```
 ######¹object structure
-```ruby
+>```ruby
 {'email_address'=>value, 'phone_number'=>value}
 ```
 
@@ -36,7 +36,7 @@ false
 ```
 
 ######²defaults to
-```ruby
+>```ruby
 true
 ```
 ###In Production
