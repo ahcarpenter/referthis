@@ -16,9 +16,9 @@ ReferThis.setup
 ```ruby
 ReferThis.url(endpoints¹, user_id, url, user_name[, optional²])
 ```
-¹object structure: ```{'email_address'=>value, 'phone_number'=>value}```
+   ¹object structure: ```{'email_address'=>value, 'phone_number'=>value}```
 
-²defaults to
+   ²defaults to
 ```ruby
 {:app_name=>Rails.application.class.to_s.split('::').first, :body=>referrer_name + ' has referred you to ' + optional[:app_name] + '! You might be interested in checking out the following: ' + url + '/'}
 ```
