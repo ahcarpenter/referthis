@@ -14,7 +14,7 @@ ReferThis.setup
 ##Usage
 ###Transmission
 ```ruby
-ReferThis.url(endpoints¹, user_id, base_url, user_name[, optional²])
+ReferThis.url(endpoints¹, user_id, url, user_name[, optional²])
 ```
 ¹object structure: ```{'email_address'=>value, 'phone_number'=>value}```
 
