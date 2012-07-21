@@ -14,24 +14,18 @@ ReferThis.setup
 ##Usage
 ###Transmission
 ```ruby
-ReferThis.url(endpoints, user_id, url, user_name[, optional])
+ReferThis.url(endpoints¹, user_id, base_url, user_name[, optional²])
 ```
-######`endpoints` Object Structure
-```ruby
-	{'email_address'=>value, 'phone_number'=>value}
-```
+######¹object structure: `{'email_address'=>value, 'phone_number'=>value}`
 
-######`optional` Default
-```ruby
-	{:app_name=>Rails.application.class.to_s.split('::').first, :body=>referrer_name + ' has referred you to ' + optional[:app_name] + '! You might be interested in checking out the following: ' + url + '/'}
-```
+######²defaults to `{:app_name=>Rails.application.class.to_s.split('::').first, :body=>referrer_name + ' has referred you to ' + optional[:app_name] + '! You might be interested in checking out the following: ' + url + '/'}`
 ###Analysis
 ```ruby
 ReferThis.clicked_through_rate(email¹,sms¹,overall²)
 ```
-¹defaults to ```false```
+######¹defaults to `false`
 
-²defaults to ```true```
+######²defaults to `true`
 ###In Production
 http://referthisdemo.herokuapp.com
 ## Versioning
