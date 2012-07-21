@@ -16,7 +16,7 @@ ReferThis.setup
 ```ruby
 ReferThis.url(endpoints¹, user_id, base_url, user_name[, optional²])
 ```
-## 
+##_
 ######¹object structure
 ```ruby
 {'email_address'=>value, 'phone_number'=>value}
@@ -31,7 +31,7 @@ ReferThis.url(endpoints¹, user_id, base_url, user_name[, optional²])
 ```ruby
 ReferThis.clicked_through_rate(email¹,sms¹,overall²)
 ```
-## 
+##_
 ######¹defaults to
 ```ruby
 false
