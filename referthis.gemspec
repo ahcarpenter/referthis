@@ -2,7 +2,7 @@
 # https://github.com/twilio/twilio-ruby
 Gem::Specification.new do |s|
   s.name = 'referthis'
-  s.version = '0.5.34'
+  s.version = '0.5.37'
   s.date = '2012-07-21'
   s.summary = ''
   s.authors = ''
