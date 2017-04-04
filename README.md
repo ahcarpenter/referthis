@@ -1,6 +1,6 @@
 <!-- https://github.com/twitter/bootstrap/blob/master/README.md
 http://twitter.github.com/bootstrap/javascript.html -->
-# ReferThis [![Build Status](https://secure.travis-ci.org/ahcarpenter/referthis.png?branch=master)][travis]
+# ReferThis [![Build Status](https://secure.travis-ci.org/ahcarpenter/referthis.png?branch=master)][travis] [![Gem Version](https://badge.fury.io/rb/referthis.svg)](https://badge.fury.io/rb/referthis)
 [travis]: http://travis-ci.org/ahcarpenter/referthis
 ## Installation
 ```referthis``` can be installed via the execution of the following command:
